@@ -1,0 +1,413 @@
+/* styling of theme toggle */
+
+:root {
+
+    
+    --lbclr: linear-gradient(180deg, #ffc688, #3a3a3a);
+    --lbafclr: linear-gradient(180deg, #242424, #777);
+    
+
+}
+
+header.header {
+
+    
+    min-height: 9.572901325478645vh;
+    position: absolute;
+    top: 0;
+    left:0;
+    right: 0;
+    z-index: 10;
+    background: transparent;
+    width: 100%;
+    filter: 
+        drop-shadow(3px 3px 2.5px #ffffff25)
+        blur(.01px);
+    display: flex;
+    padding: 1.3rem 10%;
+    justify-content: space-between;
+    align-items: center;
+    padding: 10px 20px;
+    pointer-events: all;
+    box-shadow: 10px 10px 10px #00000090;
+    
+
+}
+
+nav.navBar {
+
+    
+    display: flex;
+    align-items: center;
+    justify-content: space-evenly;
+    filter: none;
+    
+
+}
+
+#logo {
+
+    
+    display: flex;
+    height: 9.572901325478645vh;
+    width: 25%;
+    margin: 0px 0px 0px 0px;
+    align-items: center;
+    justify-content: center;
+    
+
+}
+
+a.logo {
+
+    
+    display: flex;
+    font-size: max(3.6603221083455346vw);
+    align-items: center;
+    justify-content: center;
+    height: 9.572901325478645vh;
+    filter: drop-shadow(3px 3px 2px #00000070);
+    font-family: 'Rubik', Segoe UI;
+    font-weight: 500;
+    
+
+}
+
+
+.navWrapper {
+
+    
+    display: flex;
+    align-items: center;
+    /* max-width: 50vw; */
+    justify-content: space-between;
+    
+
+}
+
+/* .searchbar {
+
+    
+    position:relative;
+    
+
+} */
+
+/* .separator {
+
+    
+    min-width: 50%;
+    height: 9.572901325478645vh;
+    background: transparent;
+    
+
+} */
+
+#SearchIcon {
+
+    
+    font-size: 1.5em;
+    color: grey;
+    
+
+}
+
+.searchIcon {
+    /* background: black; */
+    border-radius: 50%;
+    height: 2em;
+    width: 2em;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.searchInput {
+
+    
+    /* height: 5.154639175257732vh; */
+    /* width: 15vw; */
+    font-size: 1rem;
+    
+
+}
+
+.searchbar {
+
+    
+    height: 3.125rem;
+    display: flex;
+    cursor: pointer;
+    padding:0px 0px 0px 10px ;
+    background: #fff;
+    border-radius: 10px;
+    align-items: center;
+    
+    
+
+}
+
+.searchIcon:active {
+
+    
+    transition: 0.8s;
+    
+
+}
+
+.searchbar:hover #searchbar {
+
+    
+    width: 300px;
+    
+
+}
+
+.searchbar:hover {
+    box-shadow: 10px 10px 10px 5px #000000;
+}
+
+.searchbar #searchbar {
+
+    
+    height: 30px;
+    width: 0px;
+    outline: none;
+    margin-left: 10px;
+    border: none;
+    font-weight: 500;
+    transition: 0.8s;
+    background: transparent;
+    
+
+}
+
+.Spacer {
+
+    
+    width: 1.5vw;
+    max-width: 3.5vw ;
+    
+
+}
+
+#GithubIcon {
+
+    
+    font-size: 1.5em;
+    color: white;
+    
+
+}
+
+.githubIcon {
+
+    
+    height: 2em;
+    width: 2em;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    
+
+}
+
+.githubRepo {
+
+    
+    font-size: 1rem;
+    color: rgb(0, 0, 0);
+    background: #000;
+    visibility: hidden;
+    
+
+}
+
+.github+.githubRepo:hover {
+
+    
+    font-size: 1rem;
+    color: rgb(0, 0, 0);
+    background: #000;
+    /* visibility: hidden; */
+    
+
+}
+
+.github {
+
+    
+    height: 3.125rem;
+    display: flex;
+    cursor: pointer;
+    padding:0px 0px 0px 10px ;
+    background: #494949;
+    border-radius: 10px;
+    align-items: center;
+    
+
+}
+
+.githubIcon:active {
+
+    
+    transition: 0.08s;
+    
+
+}
+
+.github:hover #github {
+
+    
+    width: 300px;
+    
+
+}
+
+.github #github {
+
+    
+    height: 30px;
+    width: 0px;
+    outline: none;
+    margin-left: 10px;
+    border: none;
+    font-weight: 500;
+    transition: 0.8s;
+    background: transparent;
+    
+
+}
+
+label {
+
+    
+    top: -0;
+    width: 3.125rem;
+    height: 3.125rem;
+    display: flex;
+    cursor: pointer;
+    position: relative;
+    border-radius: 50%;
+    align-items: center;
+    flex-direction: row;
+    justify-content: center;
+    
+
+}
+
+input#themeToggle {
+
+    
+    position: absolute;
+    visibility: hidden;
+    
+
+}
+
+.sunny {
+
+    
+    color: #666;
+    font-size: 2em;
+    filter: drop-shadow(
+        
+        1px 3.5px 3px #000000a6
+        
+    );
+    transform: scale(0); /*commenting this and you will see a cool animation*/
+    border-radius: 50%;
+    transition: 1s ease;
+    
+
+}
+
+.sunny:hover {
+
+    
+    width: 2.5rem;
+    height: 2.5rem;
+    border-radius: 50%;
+    text-shadow: #000000a6;
+    
+
+}
+
+input:checked~.sunny{
+
+    
+    transition: .8s;
+    transform: scale(1) rotate(360deg);
+    
+
+}
+
+.moon {
+
+    
+    color: #797979;
+    font-size: 2em;
+    position: absolute;
+    border-radius: 50%;
+    transition: 1s ease;
+    filter: drop-shadow(
+        
+        2px 3.5px 3px #000000a6
+        
+    );
+    /* transform: scale(0); */
+    
+
+}
+
+.moon:hover {
+
+    
+    width: 2.5rem;
+    height: 2.5rem;
+    border-radius: 50%;
+    text-shadow: #000000a6;
+    
+
+}
+
+input:checked~.moon {
+
+    
+    transform: rotate(360deg) scale(0);
+    
+
+}
+
+.toggle {
+
+    
+    z-index: -1;
+    width: 3.125rem;
+    height: 3.125rem;
+    display: block;
+    position: absolute;
+    border-radius: 20px;
+    transition: 1s ease-in;
+    background: #2c2c2c;
+    box-shadow: 
+        
+        inset 0 .5rem 3.75rem #00000015,
+        inset 0 .5rem .5rem #00000015,
+        inset 0 -0.25rem 3.75rem #00000015,
+        inset .0625rem .0625rem .1875rem #ffffff15
+        
+    ;
+    
+
+}
+
+input:checked~.toggle {
+
+    
+    background: #f8f8f8;
+    
+
+}
+
+
