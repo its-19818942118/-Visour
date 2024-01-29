@@ -24,41 +24,6 @@ document.addEventListener('DOMContentLoaded', function () {
     });
 });
 
-// sticky header
-
-document.addEventListener("DOMContentLoaded", function () {
-    // Check if the user has already chosen to have a sticky header
-    if (!localStorage.getItem("stickyHeader")) {
-        // Show the popup if the choice hasn't been made
-        showStickyHeaderPopup();
-    } else {
-        // Apply sticky header based on the user's choice
-        applyStickyHeader(localStorage.getItem("stickyHeader") === "true");
-    }
-});
-
-function showStickyHeaderPopup() {
-    if (confirm("Do you want a sticky header?")) {
-        // User chose yes
-        applyStickyHeader(true);
-    } else {
-        // User chose no
-        applyStickyHeader(false);
-    }
-}
-
-function applyStickyHeader(isSticky) {
-    const header = document.getElementById("site-header");
-    if (isSticky) {
-        header.classList.add("sticky");
-    } else {
-        header.classList.remove("sticky");
-    }
-
-    // Save the user's choice in local storage
-    localStorage.setItem("stickyHeader", isSticky);
-}
-
 // cursor trailer
 
 const trailer = document.getElementById("trailer");
