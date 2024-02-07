@@ -28,8 +28,10 @@ body {
     /* overflow-y: visible; */
     margin: 0;
     /* padding-top: 13vh; */
-    padding: 0;
+    padding: 11vh 0 0 0;
+    /* overflow: hidden; */
     position: absolute;
+    width: 100%;
     font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
     background: #000;
             display: flex;
@@ -53,8 +55,9 @@ body.dark-theme {
 
     color: var(--clr); /* Adjust the text color for dark mode */
     background-color: var(--bgclr);
-    padding: 13vh 0 0 0;
-    margin: 0;
+    padding: 12vh 0 0 0;
+    /* margin: 0; */
+    /* overflow: hidden; */
 
 }
 
@@ -67,12 +70,17 @@ a {
 
 }
 
-footer {
+footer > div {
 
     
     display: flex;
+    width: 100%;
     justify-content: center;
     position: absolute;
+    /* top: 100vh; */
+    bottom: 0;
+    left: 0;
+    right: 0;
     filter: drop-shadow(1px 3px 1px #a52a2a);
     
 
@@ -95,12 +103,6 @@ footer {
 
 }
 
-@media screen and (min-width: 600px) {
-    .logo {
-        font-size: 30px; /* Minimum font size for larger screens */
-    }
-}
-
 ::-webkit-scrollbar {
 
     
@@ -109,18 +111,18 @@ footer {
     
 
 }
+
 ::-webkit-scrollbar-track {
 
     
     background: hsla(0, 20%, 50%, 0.9);
     filter: blur(10px);
-    border: .25em solid hsla(0, 20%, 20%, 0.671);
+    border: .35em solid hsla(0, 20%, 20%, 0.671);
     margin-block: .05em;
     border-radius: 3vw;
     
 
 }
-
 
 ::-webkit-scrollbar-thumb {
 
@@ -148,25 +150,4 @@ p {
     font-size: 20px;
     
 
-}
-
-.pageWrapper {
-
-    
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    position: absolute;
-    top: 100px;
-    z-index: 100;
-    color: white;
-    
-
-}
-
-div.contentWrapper.mainWrapper {
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    border: #a52a2a;
 }

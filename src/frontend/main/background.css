@@ -4,48 +4,64 @@
     pointer-events: all;
     position: relative;
     top: 0;
+    margin: 0;
     /* cursor: none; */
     
 
 }
 
 .hexagon {
-    width: 7.5rem ;
-    height: 7.5rem;
-    margin-left: 3px;
-    margin-bottom: 1.5px;
+    width: 80px ;
+    height: 80px;
+    margin-left: 2.25px;
+    margin-right: 2.25px;
+    margin-bottom: 3.5px;
+    /* margin-left: 3px; */
+    /* margin-bottom: 3px; */
     background: #111;
+    /* border: #0f0 solid; */
     clip-path: polygon(50% 0, 100% 25%, 100% 75%, 50% 100%, 0% 75%, 0% 25%);
     animation: rgb 4s linear infinite;
     transition: 15s;
 }
-/* .halfHexagon {
-    width: 100px;
-    height: 100px;
-    margin-left: 2px;
-    margin-right: -100px;
-    margin-bottom: 5px;
+.hexagon- {
+    width: 80px ;
+    height: 80px;
+    margin-right: 1px;
+    margin-left: 1px;
+    /* margin-bottom: 3px; */
     background: #111;
-    clip-path: polygon(50% 0, 50% 25%, 50% 75%, 50% 100%, 0 75%, 0 25%);
+    /* border: #0f0 solid; */
     clip-path: polygon(50% 0, 100% 25%, 100% 75%, 50% 100%, 0% 75%, 0% 25%);
     animation: rgb 4s linear infinite;
     transition: 15s;
-} */
-.hexagon:hover {
+}
+.-hexagon {
+    width: 80px ;
+    height: 80px;
+    margin-left: 1px;
+    /* margin-left: 3px; */
+    margin-bottom: 3px;
+    background: #111;
+    /* border: #0f0 solid; */
+    clip-path: polygon(50% 0, 100% 25%, 100% 75%, 50% 100%, 0% 75%, 0% 25%);
+    animation: rgb 4s linear infinite;
+    transition: 15s;
+}
+.-hexagon:hover,
+.hexagon:hover,
+.hexagon-:hover {
     background: #0f0;
     transition: 0s;
 }
-/* .halfHexagon:hover {
-    background: #0f0;
-    transition: 0s;
-} */
-.hexagon:active {
+.-hexagon:active,
+.hexagon:active,
+.hexagon-:active {
     animation: rgb 4s linear infinite;
 }
-/* .halfHexagon:active {
-    animation: rgb 4s linear infinite;
-} */
-.hexagon::before {
+.-hexagon::before,
+.hexagon::before,
+.hexagon-::before {
     content: '';
     position: absolute;
     width: 50%;
@@ -53,15 +69,9 @@
     background-color: #ffffff05;
     z-index: 2;
 }
-/* .halfHexagon::before {
-    content: '';
-    position: absolute;
-    width: 50%;
-    height: 100%;
-    background-color: #ffffff05;
-    z-index: 2;
-} */
-.hexagon::after {
+.-hexagon::after,
+.hexagon::after,
+.hexagon-::after {
     content: '';
     position: absolute;
     top: .1875rem;
@@ -71,26 +81,33 @@
     background: #111;
     clip-path: polygon(50% 0, 100% 25%, 100% 75%, 50% 100%, 0% 75%, 0% 25%);
 }
-/* .halfHexagon::after {
-    content: '';
-    position: absolute;
-    top: 3px;
-    bottom: 3px;
-    left: 3px;
-    right: 3px;
-    background: #111;
-    clip-path: polygon(50% 0, 100% 25%, 100% 75%, 50% 100%, 0% 75%, 0% 25%);
-} */
-.row {
+.hexRow01 {
     display: flex;
-    margin-top: -1.7rem;
-    margin-left: -60px;
-    margin-bottom: -1.75rem;
-    margin-right: -60px;
-}
-.row:nth-child(even) {
     margin-top: -1.75rem;
-    margin-left: .0625rem;
+    margin-bottom: 1px;
+    /* margin-left: 1px; */
+    /* margin-bottom: -1.75rem; */
+    /* margin-right: -3.75rem; */
+}
+.hexRow02, .hexRow04, .hexRow06, .hexRow08, .hexRow10 {
+    display: flex;
+    margin-top: -20px;
+    margin-left: 40px;
+    /* margin-bottom: -1.75rem; */
+    /* margin-right: -3.75rem; */
+}
+.hexRow03,.hexRow05, .hexRow07, .hexRow09 {
+    display: flex;
+    margin-top: -20px;
+    margin-bottom: 1px;
+    /* margin-left: -58.5px; */
+    /* margin-bottom: -1.75rem; */
+    /* margin-right: -3.75rem; */
+}
+.hexRow11 {
+    display: flex;
+    margin-top: -20px;
+    margin-bottom: 20px;
 }
 @keyframes rgb {
     0% {
@@ -104,9 +121,10 @@
     }
 }
 
-.pageWrapper {
-    margin: 0;
-    padding: 0;
+.main.pageWrapper {
+    margin: 0 auto 0;
+    padding: .625rem;
+    max-width: 90rem;
 }
 
 .pageWrapper:hover {
@@ -166,7 +184,8 @@
     
     pointer-events: none;
     opacity: 0;
-    transition: opacity 500ms ease;
+    transition: opacity 500ms ease-in-out !important;
+    /* transition: 15s ease-in-out; */
     
     display: grid;
     place-items: center;
@@ -191,22 +210,12 @@
     0% {
         filter: hue-rotate(0deg);
     }
+    50% {
+        filter: hue-rotate(180deg);
+    }
     100%{
         filter: hue-rotate(360deg);
     }
     
 
-}
-
-.pageWrapper {
-    /* background: red; */
-    display: inline-block;
-    height: 100vh;
-    width: 100vw;
-    margin: 10PX 10PX 10PX 10PX;
-}
-
-.text {
-    display: flex;
-    flex-wrap: wrap;
 }
